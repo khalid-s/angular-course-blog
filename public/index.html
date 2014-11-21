@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'> -->
+    <title>Angular JS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/blog.css" rel="stylesheet">
+
+  </head>
+  <body ng-app="blog">
+
+    <ng-include src="'view/header.html'"></ng-include>
+
+    <div class="container">
+
+        <div class="blog-header">
+          <h1 class="blog-title">AngularJS Bloggg</h1>
+          <p class="lead blog-description">The official   example template of creating a blog with   Bootstrap.</p>
+        </div>
+      <div class="row">
+
+        <div class="col-sm-12 blog-main">
+          
+          <ng-view></ng-view>
+
+          <ul class="pager">
+            <li><a href="#">Previous</a></li>
+            <li><a href="#">Next</a></li>
+          </ul>
+
+        </div><!-- /.blog-main -->
+
+      </div><!-- /.row -->
+      
+    </div><!-- /.container -->
+
+    <ng-include src="'view/footer.html'"></ng-include>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers.js"></script>
+
+  </body>
+</html>
